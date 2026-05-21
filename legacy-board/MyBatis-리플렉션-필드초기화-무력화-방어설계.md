@@ -78,15 +78,25 @@ public List<BoardFileDTO> getFiles() {
 
 #### ① 테스트 시나리오 작성
 
-<img width="821" height="413" alt="image" src="https://github.com/user-attachments/assets/9d3803f9-77c1-45a6-92c5-667d88f14d3e" /><br>
+<img width="821" height="413" alt="1" src="https://github.com/user-attachments/assets/2b0733ac-b229-47dd-a19f-8223b704a83e" />
+
+
+<br>
 MyBatis를 통해 DB 조회를 마친 객체의 필드를 리플렉션으로 강제 오염(null)시킨 후, Getter의 반환값을 검증합니다.
 
 #### ② 검증 결과 (JUnit)
-<img width="1024" height="177" alt="image" src="https://github.com/user-attachments/assets/3e8eb17c-fe28-48aa-8090-7ae0874f0982" /><br>
+
+<img width="1024" height="177" alt="2" src="https://github.com/user-attachments/assets/8f1a7488-8165-4122-b6ae-e0bd6ba63b1f" />
+
+
+<br>
 테스트 실행 결과, 모든 Assertion을 통과하며 초록불(Green Bar)이 점등되었습니다.
 
 #### ③ 최종 로그 확인
-<img width="1407" height="23" alt="image" src="https://github.com/user-attachments/assets/cc1f6455-a484-4d3d-bc41-ec25706db873" /><br>
+<img width="1099" height="44" alt="3" src="https://github.com/user-attachments/assets/af78c146-2903-4645-a958-5b985a115e98" />
+
+
+<br>
 실제 런타임 로그에서도 null이 아닌 빈 리스트([])가 안전하게 반환되고 있음을 확인할 수 있습니다.
 
 
